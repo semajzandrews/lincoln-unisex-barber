@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"lincoln-unisex-barber-dev","runtimeExecutable":"npm","runtimeArgs":["run","dev","--","-p","3009"],"port":3009}]}

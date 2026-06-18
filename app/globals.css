@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────────
+   LINCOLN UNISEX BARBER SHOP — "LINE WORK / After Dark Precision"
+   East Orange, NJ. The young-barber, sharp-line, urban personality.
+   Concept: THE CUT IS A LINE. A barber's defining skill is the line
+   up — the crisp edge. The whole page is organized around one drawn
+   clipper line and a fade gradient as the literal visual motif.
+
+   Differentiated HARD from our two other barbershops:
+     - cleancuts  = dark BOTTLE-GREEN deco parlor, brass + oxblood,
+       Bebas signage, a spinning barber-pole spine.
+     - keeping-it-handsome = warm BONE PAPER atelier, Fraunces serif,
+       leather + aged brass, tailor calm.
+   THIS one = graphite-ink street modern, brushed STEEL + a hot
+   street-ORANGE signal, ANTON condensed display (no Bebas, no serif),
+   a scroll-DRAWN clipper-line + fade-bar spine (no pole), unisex/urban.
+   ─────────────────────────────────────────────────────────────── */
+
+:root {
+  --ink:     #0b0c0e;   /* graphite near-black ground */
+  --ink-2:   #121418;   /* raised panel */
+  --ink-3:   #181b21;   /* card / inset */
+  --ink-4:   #20242c;   /* hover raise */
+
+  --steel:   #c7cdd6;   /* brushed steel — primary text */
+  --steel-2: #8b939f;   /* muted body */
+  --steel-3: #5b626d;   /* faint labels */
+
+  --orange:    #ff6a2b; /* the signal — hot street orange */
+  --orange-d:  #e2521a; /* pressed */
+  --orange-dim: rgba(255,106,43,0.12);
+  --orange-glow: rgba(255,106,43,0.06);
+
+  --line:   rgba(199,205,214,0.12);
+  --line-2: rgba(199,205,214,0.06);
+
+  --font-display: var(--font-anton), "Arial Narrow", sans-serif;
+  --font-body:    var(--font-archivo), system-ui, sans-serif;
+  --font-mono:    var(--font-jbmono), ui-monospace, monospace;
+
+  --max: 1280px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: auto; }
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+
+body {
+  background: var(--ink);
+  color: var(--steel);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::selection { background: var(--orange); color: var(--ink); }
+
+/* film grain */
+.grain {
+  position: fixed; inset: 0; z-index: 200; pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* layout */
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding-inline: clamp(1.3rem, 4.5vw, 3.2rem); }
+.section { padding-block: clamp(4.5rem, 11vw, 9rem); position: relative; z-index: 1; }
+
+/* display helpers */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+.mono { font-family: var(--font-mono); }
+
+/* eyebrow / tag */
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+/* the fade bar — the literal "fade" motif (skin → full) */
+.fadebar {
+  background: linear-gradient(
+    180deg,
+    var(--ink) 0%,
+    #2a2e36 22%,
+    #4a505b 48%,
+    #8b939f 74%,
+    var(--steel) 100%
+  );
+}
+
+/* primary CTA */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--orange); color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 1rem 1.7rem;
+  border: none; cursor: none;
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.btn-primary:hover { background: var(--orange-d); transform: translateY(-2px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: transparent; color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 1rem 1.7rem;
+  border: 1px solid var(--line); cursor: none;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+/* custom cursor */
+.cursor-dot, .cursor-ring {
+  position: fixed; top: 0; left: 0; pointer-events: none; z-index: 10000;
+  border-radius: 50%; transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.cursor-dot { width: 6px; height: 6px; background: var(--orange); }
+.cursor-ring {
+  width: 30px; height: 30px; border: 1px solid var(--steel);
+  transition: width 0.25s var(--ease), height 0.25s var(--ease), background 0.25s var(--ease);
+}
+.cursor-ring.hovering { width: 52px; height: 52px; background: rgba(255,106,43,0.1); border-color: var(--orange); }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--orange); }
+
+/* hairline divider */
+.hr { height: 1px; background: var(--line); border: none; }
+
+/* keyframes */
+@keyframes floatOrb {
+  0%,100% { transform: translate(0,0); }
+  50% { transform: translate(28px,-34px); }
+}
+@keyframes floatOrbAlt {
+  0%,100% { transform: translate(0,0); }
+  50% { transform: translate(-30px,26px); }
+}
+.orb-float { animation: floatOrb 13s ease-in-out infinite; }
+.orb-float-alt { animation: floatOrbAlt 16s ease-in-out infinite; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex; white-space: nowrap;
+  animation: marquee-scroll linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* responsive */
+@media (max-width: 760px) {
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-float, .orb-float-alt, .marquee-track { animation: none !important; }
+}
