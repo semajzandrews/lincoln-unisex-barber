@@ -103,7 +103,7 @@ export default function Navigation() {
             </a>
           ))}
           <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary" style={{ padding: "0.7rem 1.3rem" }}>
-            Book a Chair
+            Call to book a chair
           </a>
         </nav>
 

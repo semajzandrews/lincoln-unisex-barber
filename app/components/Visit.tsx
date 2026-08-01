@@ -78,7 +78,7 @@ export default function Visit() {
                 })}
               </div>
               <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary" style={{ marginTop: "1.6rem" }}>
-                Book a Chair
+                Call to book a chair
               </a>
             </div>
           </motion.div>

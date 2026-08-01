@@ -86,7 +86,7 @@ export default function Hero() {
             style={{ display: "flex", flexWrap: "wrap", gap: "0.9rem" }}
           >
             <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary">
-              Book a Chair
+              Call to book a chair
             </a>
             <a
               href="#services"
