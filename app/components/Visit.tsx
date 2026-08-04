@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { BUSINESS } from "../lib/business";
+import CallOrText from "./CallOrText";
 
 export default function Visit() {
   const ref = useRef<HTMLElement>(null);
@@ -43,10 +44,17 @@ export default function Visit() {
 
             <div>
               <div className="mono" style={{ fontSize: "0.68rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--orange)", marginBottom: "0.6rem" }}>
-                Call
+                Call or text
               </div>
-              <a href={`tel:${BUSINESS.phoneE164}`} className="display" style={{ fontSize: "1.5rem", color: "var(--steel)", textTransform: "none" }}>
+              <a href={BUSINESS.phoneHref} className="display" style={{ fontSize: "1.5rem", color: "var(--steel)", textTransform: "none", display: "block" }}>
                 {BUSINESS.phoneDisplay}
+              </a>
+              <a
+                href={BUSINESS.smsHref}
+                className="mono"
+                style={{ fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--steel-3)", marginTop: "0.5rem", display: "inline-block" }}
+              >
+                Or text us a pic of the cut →
               </a>
             </div>
 
@@ -77,9 +85,7 @@ export default function Visit() {
                   );
                 })}
               </div>
-              <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary" style={{ marginTop: "1.6rem" }}>
-                Call to book a chair
-              </a>
+              <CallOrText variant="inline" style={{ marginTop: "1.6rem" }} />
             </div>
           </motion.div>
 

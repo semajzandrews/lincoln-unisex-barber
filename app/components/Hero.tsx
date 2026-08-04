@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { BUSINESS } from "../lib/business";
+import CallOrText from "./CallOrText";
 
 const HEAD_LINES = ["A SHARP", "LINE.", "A CLEAN", "FADE."];
 const PHOTO =
@@ -85,9 +86,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.1 }}
             style={{ display: "flex", flexWrap: "wrap", gap: "0.9rem" }}
           >
-            <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary">
-              Call to book a chair
-            </a>
+            <CallOrText variant="inline" />
             <a
               href="#services"
               className="btn-ghost"

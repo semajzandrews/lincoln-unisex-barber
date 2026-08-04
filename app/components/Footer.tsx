@@ -65,8 +65,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`tel:${BUSINESS.phoneE164}`} style={{ color: "var(--steel-2)" }}>
+                <a href={BUSINESS.phoneHref} style={{ color: "var(--steel-2)" }}>
                   {BUSINESS.phoneDisplay}
+                </a>
+                <span style={{ color: "var(--steel-3)" }}> · </span>
+                <a href={BUSINESS.smsHref} style={{ color: "var(--orange)" }}>
+                  Text
                 </a>
               </li>
               <li className="mono" style={{ fontSize: "0.8rem", color: "var(--steel-3)" }}>

@@ -2,6 +2,16 @@
 // Source: Google listing (cid 3717212052147294373) + Birdeye (5.0 stars, 14 reviews).
 // Phone is the assignment-verified contact line. Do not invent facts.
 
+import { formatPhone, e164, telHref, smsHref } from "./phone";
+
+// PHONE DOCTRINE: one digits-only constant. Display and hrefs are both derived
+// from it, so the shape on screen and the shape in the dialer can never drift.
+const PHONE = "8623399926";
+
+// Short, on-brand, and it invites the thing a barber actually wants first:
+// a picture of the cut you're after and a day.
+const SMS_BODY = "Hey Lincoln — looking to book a chair. ";
+
 export const BUSINESS = {
   name: "Lincoln Unisex Barber Shop",
   shortName: "Lincoln",
@@ -10,8 +20,12 @@ export const BUSINESS = {
   city: "East Orange",
   state: "NJ",
   zip: "07017",
-  phoneDisplay: "(862) 339-9926",
-  phoneE164: "+18623399926",
+  phoneDigits: PHONE,
+  phoneDisplay: formatPhone(PHONE), // "(862) 339-9926"
+  phoneE164: e164(PHONE), // "+18623399926"
+  phoneHref: telHref(PHONE), // "tel:+18623399926"
+  smsHref: smsHref(PHONE, SMS_BODY),
+  smsBody: SMS_BODY,
   rating: "5.0",
   reviewCount: 14,
   hours: [

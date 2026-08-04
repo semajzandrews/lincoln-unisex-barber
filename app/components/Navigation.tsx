@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { BUSINESS } from "../lib/business";
+import CallOrText from "./CallOrText";
 
 const LINKS = [
   { label: "Services", href: "#services" },
@@ -102,9 +103,7 @@ export default function Navigation() {
               {l.label}
             </a>
           ))}
-          <a href={`tel:${BUSINESS.phoneE164}`} className="btn-primary" style={{ padding: "0.7rem 1.3rem" }}>
-            Call to book a chair
-          </a>
+          <CallOrText label="Call or text" />
         </nav>
 
         {/* mobile toggle */}
@@ -148,13 +147,7 @@ export default function Navigation() {
                   {l.label}
                 </a>
               ))}
-              <a
-                href={`tel:${BUSINESS.phoneE164}`}
-                className="btn-primary"
-                style={{ marginTop: "1rem", justifyContent: "center" }}
-              >
-                Call {BUSINESS.phoneDisplay}
-              </a>
+              <CallOrText variant="inline" style={{ marginTop: "1rem" }} />
             </div>
           </motion.div>
         )}
