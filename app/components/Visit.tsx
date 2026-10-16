@@ -79,7 +79,7 @@ export default function Visit() {
                         {h.day}
                       </span>
                       <span className="mono" style={{ fontSize: "0.82rem", color: closed ? "var(--steel-3)" : "var(--steel-2)" }}>
-                        {closed ? "Closed" : `${h.open} — ${h.close}`}
+                        {closed ? "Closed" : `${h.open} to ${h.close}`}
                       </span>
                     </div>
                   );

@@ -36,7 +36,7 @@ export default function Proof() {
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
               <figcaption className="mono" style={{ fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", marginTop: "1rem", opacity: 0.7 }}>
-                — {r.name}
+                {r.name}
               </figcaption>
             </motion.figure>
           ))}

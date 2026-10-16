@@ -170,10 +170,10 @@ export default function Hero() {
             }}
           >
             <div className="mono" style={{ fontSize: "0.66rem", color: "var(--steel-3)", letterSpacing: "0.16em" }}>
-              MON–FRI
+              OPEN 7 DAYS
             </div>
             <div className="display" style={{ fontSize: "1.3rem", color: "var(--orange)" }}>
-              9 — 6
+              8AM to 11PM
             </div>
           </div>
         </motion.div>

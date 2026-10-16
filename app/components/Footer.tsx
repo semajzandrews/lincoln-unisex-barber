@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mono" style={{ fontSize: "0.8rem", color: "var(--steel-3)" }}>
-                Mon to Fri · 9 to 6
+                Open 7 days · 8 AM to 11 PM
               </li>
             </ul>
           </div>

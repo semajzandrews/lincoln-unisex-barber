@@ -8,8 +8,8 @@ const PHOTO =
 
 const STATS = [
   { k: "5.0", v: "Star rating" },
-  { k: "Mon–Fri", v: "Open 9 to 6" },
-  { k: "All ages", v: "Unisex chairs" },
+  { k: "7 days", v: "Open till 11 PM" },
+  { k: "Walk-ins", v: "Welcome" },
 ];
 
 export default function Story() {
@@ -66,9 +66,9 @@ export default function Story() {
           </h2>
           <p style={{ color: "var(--steel-2)", fontSize: "1.04rem", marginBottom: "1.1rem" }}>
             Lincoln Unisex sits right at 11 North Harrison, a short walk from the
-            station. It is a neighborhood shop in the truest sense: men, women,
-            and kids in the same room, good music on, and barbers who actually
-            care how you walk out.
+            station. It is a neighborhood shop in the truest sense: a unisex
+            room, good music on, walk-ins welcome, open early and late seven
+            days a week.
           </p>
           <p style={{ color: "var(--steel-2)", fontSize: "1.04rem", marginBottom: "2rem" }}>
             The regulars come back for one reason. The work is sharp and the
