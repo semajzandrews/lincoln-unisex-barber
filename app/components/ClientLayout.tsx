@@ -14,6 +14,8 @@ const Proof = dynamic(() => import("./Proof"), { ssr: false });
 const Visit = dynamic(() => import("./Visit"), { ssr: false });
 const Footer = dynamic(() => import("./Footer"), { ssr: false });
 const CallButton = dynamic(() => import("./CallButton"), { ssr: false });
+const MobileHero = dynamic(() => import("./MobileHero"), { ssr: false });
+const ActionBar = dynamic(() => import("./ActionBar"), { ssr: false });
 
 export default function ClientLayout() {
   return (
@@ -23,6 +25,7 @@ export default function ClientLayout() {
       <CustomCursor />
       <Navigation />
       <main>
+        <MobileHero />
         <Hero />
         <Marquee />
         <Services />
@@ -33,6 +36,7 @@ export default function ClientLayout() {
       </main>
       <Footer />
       <CallButton />
+      <ActionBar />
     </>
   );
 }

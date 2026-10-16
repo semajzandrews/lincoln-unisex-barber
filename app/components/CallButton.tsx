@@ -25,6 +25,7 @@ export default function CallButton() {
           exit={{ opacity: 0, y: 20, scale: 0.9 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           data-hover
+          className="fab-call"
           style={{
             position: "fixed",
             bottom: "1.4rem",

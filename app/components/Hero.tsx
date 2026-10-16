@@ -12,6 +12,7 @@ export default function Hero() {
   return (
     <section
       id="top"
+      className="dhero"
       style={{ position: "relative", overflow: "hidden", paddingTop: "112px" }}
     >
       {/* ambient orbs */}
@@ -139,7 +140,7 @@ export default function Hero() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={PHOTO}
-                alt="A barber giving a fresh fade in the chair at Lincoln Unisex Barber Shop"
+                alt="A barber giving a fresh fade in the chair"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -180,6 +181,7 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @media (max-width: 939px) { .dhero { display: none; } }
         .hero-grid { display: grid; grid-template-columns: 1fr; gap: clamp(3rem, 6vw, 4.5rem); }
         @media (min-width: 940px) {
           .hero-grid { grid-template-columns: 1.05fr 0.85fr; gap: 4rem; }
