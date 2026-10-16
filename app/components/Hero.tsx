@@ -76,8 +76,8 @@ export default function Hero() {
             style={{ maxWidth: "30rem", color: "var(--steel-2)", fontSize: "1.05rem", marginBottom: "2.2rem" }}
           >
             A neighborhood barbershop on Harrison Street where the line up is
-            taken seriously. Fades, tapers, beard work, and kids&apos; cuts for
-            the whole family. Young hands, steady precision, fair prices.
+            taken seriously. Fades, tapers, line ups and beard work, walk-ins
+            welcome. Young hands, steady precision, fair prices.
           </motion.p>
 
           <motion.div

@@ -8,8 +8,8 @@ const SERVICES = [
   {
     n: "01",
     title: "The Fade",
-    body: "Skin, low, mid, or high. Blended clean from the skin up so the line never jumps. The cut Lincoln is known for.",
-    tags: ["Skin Fade", "Taper", "Burst"],
+    body: "Skin, low, mid, or high. Blended clean from the skin up so the line never jumps.",
+    tags: ["Skin Fade", "Taper"],
   },
   {
     n: "02",
@@ -20,14 +20,14 @@ const SERVICES = [
   {
     n: "03",
     title: "Beard Work",
-    body: "Shaped, lined, and balanced to the cut. Hot towel and a clean razor finish so it sits the way it should.",
-    tags: ["Beard Sculpt", "Hot Towel", "Razor Line"],
+    body: "Shaped, lined, and balanced to the cut so it sits the way it should.",
+    tags: ["Beard Shape", "Beard Line"],
   },
   {
     n: "04",
-    title: "Kids & Family",
-    body: "Unisex chairs for every age. First cuts, school-day trims, and the whole family in one room. Patient hands, no rush.",
-    tags: ["Kids' Cut", "Unisex", "Family"],
+    title: "Walk-Ins",
+    body: "No appointment needed. Come in, take a seat, and get in the chair. Open seven days, early to late.",
+    tags: ["Walk-Ins", "Unisex", "7 Days"],
   },
 ];
 

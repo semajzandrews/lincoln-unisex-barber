@@ -3,10 +3,9 @@
 const ITEMS = [
   "Skin Fades",
   "Line Ups",
-  "Beard Sculpts",
-  "Kids' Cuts",
+  "Beard Work",
   "Tapers",
-  "Hot Towel Finish",
+  "Open 7 Days",
   "Walk-Ins Welcome",
   "Ask For Alex",
 ];
