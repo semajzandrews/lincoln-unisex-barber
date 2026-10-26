@@ -26,7 +26,7 @@ const jbmono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lincoln Unisex Barber Shop · East Orange, NJ",
   description:
-    "A sharp line and a clean fade in the heart of East Orange. Cuts, fades, beards, and kids' cuts for the whole family. Ask for Alex. 11 N Harrison St.",
+    "A sharp line and a clean fade in the heart of East Orange. Fades, tapers, line ups and beard work. Walk-ins welcome. Ask for Alex. 11 N Harrison St.",
   openGraph: {
     title: "Lincoln Unisex Barber Shop · East Orange, NJ",
     description:
